@@ -59,3 +59,8 @@ struct ContentView: View {
 #Preview {
     ContentView(viewModel: ContentViewModel(quoteGenerator: RandomQuoteGenerator()))
 }
+
+#Preview {
+    ContentView(viewModel: ContentViewModel(quoteGenerator: RandomQuoteGenerator()))
+        .preferredColorScheme(.dark)
+}
