@@ -11,7 +11,7 @@ import SwiftUI
 struct QuotesOfTheDayApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: ContentViewModel(quoteGenerator: RandomQuoteGenerator()))
         }
     }
 }
