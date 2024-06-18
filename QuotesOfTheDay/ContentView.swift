@@ -25,28 +25,36 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var viewModel: ContentViewModel
+    @State private var isRefreshTapped = false
     
     var body: some View {
         VStack(alignment: .center, spacing: 24) {
-            VStack(alignment: .leading, spacing: 8) {
-                Text(viewModel.quote.message)
-                    .font(.title2)
-                    .foregroundStyle(.primary)
-                
-                Text(viewModel.quote.owner)
-                    .font(.caption)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundStyle(.secondary)
+            ScrollView {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(viewModel.quote.message)
+                        .font(.title)
+                        .foregroundStyle(.primary)
+                    
+                    Text(viewModel.quote.owner)
+                        .font(.body)
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundStyle(.secondary)
+                }
             }
             .frame(maxHeight: .infinity, alignment: .top)
             
             Button {
-                viewModel.randomizeQuote()
+                isRefreshTapped.toggle()
+                withAnimation {
+                    viewModel.randomizeQuote()
+                }
             } label: {
                 Image(systemName: "arrow.clockwise.circle.fill")
                     .resizable()
                     .frame(width: 72, height: 72)
             }
+            .symbolEffect(.bounce.byLayer, value: isRefreshTapped)
             .padding(.top, 100)
             .frame(width: 72, height: 72)
             .frame(maxHeight: .infinity, alignment: .center)
