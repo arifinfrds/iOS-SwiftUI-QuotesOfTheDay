@@ -1,9 +1,12 @@
-protocol QuoteGenerator {
+public protocol QuoteGenerator {
     func randomizeQuote() -> Quote
 }
 
-struct RandomQuoteGenerator: QuoteGenerator {
-    let quotes: [Quote] = [
+public struct RandomQuoteGenerator: QuoteGenerator {
+    
+    public init() { }
+    
+    private let quotes: [Quote] = [
         Quote(owner: "Albert Einstein", message: "Life is like riding a bicycle. To keep your balance, you must keep moving."),
         Quote(owner: "Mahatma Gandhi", message: "Be the change that you wish to see in the world."),
         Quote(owner: "Oscar Wilde", message: "Be yourself; everyone else is already taken."),
@@ -16,7 +19,7 @@ struct RandomQuoteGenerator: QuoteGenerator {
         Quote(owner: "Confucius", message: "It does not matter how slowly you go as long as you do not stop.")
     ]
     
-    func randomizeQuote() -> Quote {
+    public func randomizeQuote() -> Quote {
         quotes.randomElement() ?? quotes[0]
     }
 }

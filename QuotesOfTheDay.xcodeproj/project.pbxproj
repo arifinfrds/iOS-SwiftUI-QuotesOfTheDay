@@ -14,8 +14,7 @@
 		1A4428EF2C21D3E500D9C042 /* QuotesOfTheDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4428EE2C21D3E500D9C042 /* QuotesOfTheDayTests.swift */; };
 		1A4428F92C21D3E500D9C042 /* QuotesOfTheDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4428F82C21D3E500D9C042 /* QuotesOfTheDayUITests.swift */; };
 		1A4428FB2C21D3E500D9C042 /* QuotesOfTheDayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4428FA2C21D3E500D9C042 /* QuotesOfTheDayUITestsLaunchTests.swift */; };
-		1A8D8FA62C21DD0C00EFECC0 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D8FA52C21DD0C00EFECC0 /* Quote.swift */; };
-		1A8D8FA82C21DD1D00EFECC0 /* QuoteGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D8FA72C21DD1D00EFECC0 /* QuoteGenerator.swift */; };
+		1A8D8FAC2C21E6F800EFECC0 /* Quote in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8D8FAB2C21E6F800EFECC0 /* Quote */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +46,7 @@
 		1A4428F42C21D3E500D9C042 /* QuotesOfTheDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuotesOfTheDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4428F82C21D3E500D9C042 /* QuotesOfTheDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesOfTheDayUITests.swift; sourceTree = "<group>"; };
 		1A4428FA2C21D3E500D9C042 /* QuotesOfTheDayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesOfTheDayUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1A8D8FA52C21DD0C00EFECC0 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		1A8D8FA72C21DD1D00EFECC0 /* QuoteGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteGenerator.swift; sourceTree = "<group>"; };
+		1A8D8FA92C21E5AD00EFECC0 /* Quote */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Quote; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8D8FAC2C21E6F800EFECC0 /* Quote in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +82,7 @@
 				1A4428ED2C21D3E500D9C042 /* QuotesOfTheDayTests */,
 				1A4428F72C21D3E500D9C042 /* QuotesOfTheDayUITests */,
 				1A4428DA2C21D3E400D9C042 /* Products */,
+				1A8D8FAA2C21E6F800EFECC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +99,7 @@
 		1A4428DB2C21D3E400D9C042 /* QuotesOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
-				1A8D8FA42C21DCFA00EFECC0 /* Data */,
+				1A8D8FA92C21E5AD00EFECC0 /* Quote */,
 				1A4428DC2C21D3E400D9C042 /* QuotesOfTheDayApp.swift */,
 				1A4428DE2C21D3E400D9C042 /* ContentView.swift */,
 				1A4428E02C21D3E500D9C042 /* Assets.xcassets */,
@@ -134,13 +134,11 @@
 			path = QuotesOfTheDayUITests;
 			sourceTree = "<group>";
 		};
-		1A8D8FA42C21DCFA00EFECC0 /* Data */ = {
+		1A8D8FAA2C21E6F800EFECC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1A8D8FA52C21DD0C00EFECC0 /* Quote.swift */,
-				1A8D8FA72C21DD1D00EFECC0 /* QuoteGenerator.swift */,
 			);
-			path = Data;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +157,9 @@
 			dependencies = (
 			);
 			name = QuotesOfTheDay;
+			packageProductDependencies = (
+				1A8D8FAB2C21E6F800EFECC0 /* Quote */,
+			);
 			productName = QuotesOfTheDay;
 			productReference = 1A4428D92C21D3E400D9C042 /* QuotesOfTheDay.app */;
 			productType = "com.apple.product-type.application";
@@ -273,9 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A8D8FA82C21DD1D00EFECC0 /* QuoteGenerator.swift in Sources */,
 				1A4428DF2C21D3E400D9C042 /* ContentView.swift in Sources */,
-				1A8D8FA62C21DD0C00EFECC0 /* Quote.swift in Sources */,
 				1A4428DD2C21D3E400D9C042 /* QuotesOfTheDayApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,6 +632,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A8D8FAB2C21E6F800EFECC0 /* Quote */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Quote;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A4428D12C21D3E400D9C042 /* Project object */;
 }

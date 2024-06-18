@@ -1,9 +1,4 @@
-//
-//  ContentView.swift
-//  QuotesOfTheDay
-//
-//  Created by arifin on 18/06/24.
-//
+import Quote
 
 final class ContentViewModel: ObservableObject {
     
