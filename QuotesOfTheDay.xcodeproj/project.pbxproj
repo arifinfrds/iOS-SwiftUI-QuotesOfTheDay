@@ -10,6 +10,7 @@
 		1A1C98A92C39746300EB8FE9 /* Domain in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C98A82C39746300EB8FE9 /* Domain */; };
 		1A1C98AC2C3977C300EB8FE9 /* QuoteGeneratorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C98AB2C3977C300EB8FE9 /* QuoteGeneratorSpy.swift */; };
 		1A1C98AF2C397DD000EB8FE9 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C98AE2C397DD000EB8FE9 /* ActivityView.swift */; };
+		1A1C98B12C39833200EB8FE9 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C98B02C39833200EB8FE9 /* SafariView.swift */; };
 		1A4428DD2C21D3E400D9C042 /* QuotesOfTheDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4428DC2C21D3E400D9C042 /* QuotesOfTheDayApp.swift */; };
 		1A4428DF2C21D3E400D9C042 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4428DE2C21D3E400D9C042 /* ContentView.swift */; };
 		1A4428E12C21D3E500D9C042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4428E02C21D3E500D9C042 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		1A1C98A82C39746300EB8FE9 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = SOURCE_ROOT; };
 		1A1C98AB2C3977C300EB8FE9 /* QuoteGeneratorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteGeneratorSpy.swift; sourceTree = "<group>"; };
 		1A1C98AE2C397DD000EB8FE9 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		1A1C98B02C39833200EB8FE9 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		1A4428D92C21D3E400D9C042 /* QuotesOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuotesOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4428DC2C21D3E400D9C042 /* QuotesOfTheDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesOfTheDayApp.swift; sourceTree = "<group>"; };
 		1A4428DE2C21D3E400D9C042 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				1A1C98AE2C397DD000EB8FE9 /* ActivityView.swift */,
+				1A1C98B02C39833200EB8FE9 /* SafariView.swift */,
 			);
 			path = SystemUI;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				1A4428DD2C21D3E400D9C042 /* QuotesOfTheDayApp.swift in Sources */,
 				1AA3A6522C396F5300A73496 /* NotificationManager.swift in Sources */,
 				1A1C98AF2C397DD000EB8FE9 /* ActivityView.swift in Sources */,
+				1A1C98B12C39833200EB8FE9 /* SafariView.swift in Sources */,
 				1AA3A6502C396E7500A73496 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

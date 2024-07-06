@@ -2,9 +2,10 @@ import Domain
 import SwiftUI
 
 struct ContentView: View {
-    
     @StateObject var viewModel: ContentViewModel
     @State private var isRefreshTapped = false
+    @State private var showingSafari = false
+    @State private var safariURL: URL?
     
     private let notificationManager: NotificationManager = LocalNotificationManager()
     
@@ -15,23 +16,36 @@ struct ContentView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(viewModel.quote.message)
                             .font(.title)
-                            .foregroundStyle(.primary)
+                            .foregroundColor(.primary)
                         
-                        Text(viewModel.quote.owner)
-                            .font(.body)
-                            .bold()
-                        
-                            .foregroundStyle(.secondary)
+                        HStack {
+                            Button(action: {
+                                showSafariView()
+                            }) {
+                                Text(viewModel.quote.owner)
+                                    .font(.body)
+                                    .bold()
+                                    .foregroundColor(.secondary)
+                            }
+                            .tint(.secondary)
+                            
+                            Button(action: {
+                                showSafariView()
+                            }) {
+                                Image(systemName: "globe")
+                            }
+                            .tint(.brown)
+                        }
                     }
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
                 
-                Button {
+                Button(action: {
                     isRefreshTapped.toggle()
                     withAnimation {
                         viewModel.randomizeQuote()
                     }
-                } label: {
+                }) {
                     Image(systemName: "arrow.clockwise.circle.fill")
                         .resizable()
                         .frame(width: 72, height: 72)
@@ -48,18 +62,18 @@ struct ContentView: View {
             }
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
-                    Button {
+                    Button(action: {
                         viewModel.copyCurrentQuote()
-                    } label: {
+                    }) {
                         Image(systemName: "doc.on.doc")
                     }
                     .tint(.brown)
                     
                     Spacer()
                     
-                    Button {
+                    Button(action: {
                         viewModel.shareCurrentQuote()
-                    } label: {
+                    }) {
                         Image(systemName: "square.and.arrow.up")
                     }
                     .tint(.brown)
@@ -71,6 +85,20 @@ struct ContentView: View {
                     }
                 }
             }
+        }
+        .sheet(isPresented: $showingSafari) {
+            if let safariURL = safariURL {
+                SafariView(url: safariURL)
+                    .edgesIgnoringSafeArea(.all)
+            }
+        }
+    }
+    
+    private func showSafariView() {
+        if let searchQuery = viewModel.quote.owner.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+           let url = URL(string: "https://www.google.com/search?q=\(searchQuery)") {
+            safariURL = url
+            showingSafari = true
         }
     }
 }
