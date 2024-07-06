@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Quote
+import Domain
 
 @main
 struct QuotesOfTheDayApp: App {

@@ -1,4 +1,4 @@
-import Quote
+import Domain
 import SwiftUI
 
 struct ContentView: View {

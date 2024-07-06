@@ -1,5 +1,5 @@
 import Combine
-import Quote
+import Domain
 
 final class ContentViewModel: ObservableObject {
     

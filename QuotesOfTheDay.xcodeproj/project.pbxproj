@@ -14,7 +14,7 @@
 		1A4428EF2C21D3E500D9C042 /* QuotesOfTheDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4428EE2C21D3E500D9C042 /* QuotesOfTheDayTests.swift */; };
 		1AA3A6502C396E7500A73496 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3A64F2C396E7500A73496 /* ContentViewModel.swift */; };
 		1AA3A6522C396F5300A73496 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3A6512C396F5300A73496 /* NotificationManager.swift */; };
-		1AE157972C21EA7F00CD6C0C /* Quote in Frameworks */ = {isa = PBXBuildFile; productRef = 1AE157962C21EA7F00CD6C0C /* Quote */; };
+		1AA3A6562C39733E00A73496 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 1AA3A6552C39733E00A73496 /* Domain */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AE157972C21EA7F00CD6C0C /* Quote in Frameworks */,
+				1AA3A6562C39733E00A73496 /* Domain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +146,7 @@
 			);
 			name = QuotesOfTheDay;
 			packageProductDependencies = (
-				1AE157962C21EA7F00CD6C0C /* Quote */,
+				1AA3A6552C39733E00A73496 /* Domain */,
 			);
 			productName = QuotesOfTheDay;
 			productReference = 1A4428D92C21D3E400D9C042 /* QuotesOfTheDay.app */;
@@ -377,7 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = QuotesOfTheDay/QuotesOfTheDay.entitlements;
+				CODE_SIGN_ENTITLEMENTS = QuotesOfTheDay/Main/QuotesOfTheDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuotesOfTheDay/Preview Content\"";
@@ -416,7 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = QuotesOfTheDay/QuotesOfTheDay.entitlements;
+				CODE_SIGN_ENTITLEMENTS = QuotesOfTheDay/Main/QuotesOfTheDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuotesOfTheDay/Preview Content\"";
@@ -529,9 +529,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1AE157962C21EA7F00CD6C0C /* Quote */ = {
+		1AA3A6552C39733E00A73496 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Quote;
+			productName = Domain;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
