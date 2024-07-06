@@ -16,6 +16,7 @@ struct ContentView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(viewModel.quote.message)
                             .font(.title)
+                            .fontDesign(.serif)
                             .foregroundColor(.primary)
                         
                         HStack {
