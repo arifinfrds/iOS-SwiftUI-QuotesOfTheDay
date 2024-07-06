@@ -6,7 +6,7 @@ public struct RandomQuoteGenerator: QuoteGenerator {
     
     public init() { }
     
-    private let quotes: [Quote] = [
+    private (set) var quotes: [Quote] = [
         Quote(owner: "Albert Einstein", message: "Life is like riding a bicycle. To keep your balance, you must keep moving."),
         Quote(owner: "Mahatma Gandhi", message: "Be the change that you wish to see in the world."),
         Quote(owner: "Oscar Wilde", message: "Be yourself; everyone else is already taken."),
