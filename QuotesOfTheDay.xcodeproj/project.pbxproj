@@ -84,14 +84,11 @@
 		1A4428DB2C21D3E400D9C042 /* QuotesOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
-				1AA3A6532C396FE200A73496 /* QuotesOfTheDay.xctestplan */,
+				1AA3A6542C39723600A73496 /* Main */,
 				1AE157952C21EA7800CD6C0C /* Info.plist */,
 				1A8D8FA92C21E5AD00EFECC0 /* Quote */,
-				1A4428DC2C21D3E400D9C042 /* QuotesOfTheDayApp.swift */,
 				1A4428DE2C21D3E400D9C042 /* ContentView.swift */,
 				1AA3A64F2C396E7500A73496 /* ContentViewModel.swift */,
-				1A4428E02C21D3E500D9C042 /* Assets.xcassets */,
-				1A4428E22C21D3E500D9C042 /* QuotesOfTheDay.entitlements */,
 				1A4428E32C21D3E500D9C042 /* Preview Content */,
 				1AA3A6512C396F5300A73496 /* NotificationManager.swift */,
 			);
@@ -109,6 +106,7 @@
 		1A4428ED2C21D3E500D9C042 /* QuotesOfTheDayTests */ = {
 			isa = PBXGroup;
 			children = (
+				1AA3A6532C396FE200A73496 /* QuotesOfTheDay.xctestplan */,
 				1A4428EE2C21D3E500D9C042 /* QuotesOfTheDayTests.swift */,
 			);
 			path = QuotesOfTheDayTests;
@@ -119,6 +117,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AA3A6542C39723600A73496 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1A4428E22C21D3E500D9C042 /* QuotesOfTheDay.entitlements */,
+				1A4428E02C21D3E500D9C042 /* Assets.xcassets */,
+				1A4428DC2C21D3E400D9C042 /* QuotesOfTheDayApp.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
