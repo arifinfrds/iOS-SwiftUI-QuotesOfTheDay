@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "441A679D-2380-485D-A19A-A2B31E3F2771",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:QuotesOfTheDay.xcodeproj",
+      "identifier" : "1A4428D82C21D3E400D9C042",
+      "name" : "QuotesOfTheDay"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:QuotesOfTheDay.xcodeproj",
+        "identifier" : "1A4428E92C21D3E500D9C042",
+        "name" : "QuotesOfTheDayTests"
+      }
+    }
+  ],
+  "version" : 1
+}
