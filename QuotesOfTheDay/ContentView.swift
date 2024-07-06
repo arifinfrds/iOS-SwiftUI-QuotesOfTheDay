@@ -5,6 +5,7 @@ struct ContentView: View {
     
     @StateObject var viewModel: ContentViewModel
     @State private var isRefreshTapped = false
+    @State private var isShareSheetPresented = false
     
     private let notificationManager: NotificationManager = LocalNotificationManager()
     
@@ -23,6 +24,20 @@ struct ContentView: View {
                             Image(systemName: "doc.on.doc.fill")
                         }
                         .tint(.primary)
+                        
+                        Button {
+                            viewModel.copyCurrentQuote()
+                            isShareSheetPresented = true
+                        } label: {
+                            Image(systemName: "square.and.arrow.up.fill")
+                        }
+                        .tint(.primary)
+                        .sheet(isPresented: $isShareSheetPresented) {
+                            ActivityView(
+                                activityItems: [UIPasteboard.general.string ?? ""],
+                                applicationActivities: nil
+                            )
+                        }
                         
                         Text(viewModel.quote.owner)
                             .font(.body)
@@ -64,4 +79,17 @@ struct ContentView: View {
 #Preview {
     ContentView(viewModel: ContentViewModel(quoteGenerator: RandomQuoteGenerator(), pasteboard: .general))
         .preferredColorScheme(.dark)
+}
+
+struct ActivityView: UIViewControllerRepresentable {
+    var activityItems: [Any]
+    var applicationActivities: [UIActivity]? = nil
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ActivityView>) -> UIActivityViewController {
+        return UIActivityViewController(activityItems: activityItems, applicationActivities: applicationActivities)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: UIViewControllerRepresentableContext<ActivityView>) {
+        // Nothing to update here
+    }
 }
