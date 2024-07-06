@@ -14,6 +14,7 @@
 		1A4428EF2C21D3E500D9C042 /* QuotesOfTheDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4428EE2C21D3E500D9C042 /* QuotesOfTheDayTests.swift */; };
 		1A4428F92C21D3E500D9C042 /* QuotesOfTheDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4428F82C21D3E500D9C042 /* QuotesOfTheDayUITests.swift */; };
 		1A4428FB2C21D3E500D9C042 /* QuotesOfTheDayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4428FA2C21D3E500D9C042 /* QuotesOfTheDayUITestsLaunchTests.swift */; };
+		1AA3A6502C396E7500A73496 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3A64F2C396E7500A73496 /* ContentViewModel.swift */; };
 		1AE157972C21EA7F00CD6C0C /* Quote in Frameworks */ = {isa = PBXBuildFile; productRef = 1AE157962C21EA7F00CD6C0C /* Quote */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		1A4428F82C21D3E500D9C042 /* QuotesOfTheDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesOfTheDayUITests.swift; sourceTree = "<group>"; };
 		1A4428FA2C21D3E500D9C042 /* QuotesOfTheDayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesOfTheDayUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1A8D8FA92C21E5AD00EFECC0 /* Quote */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Quote; sourceTree = SOURCE_ROOT; };
+		1AA3A64F2C396E7500A73496 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		1AE157952C21EA7800CD6C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				1A8D8FA92C21E5AD00EFECC0 /* Quote */,
 				1A4428DC2C21D3E400D9C042 /* QuotesOfTheDayApp.swift */,
 				1A4428DE2C21D3E400D9C042 /* ContentView.swift */,
+				1AA3A64F2C396E7500A73496 /* ContentViewModel.swift */,
 				1A4428E02C21D3E500D9C042 /* Assets.xcassets */,
 				1A4428E22C21D3E500D9C042 /* QuotesOfTheDay.entitlements */,
 				1A4428E32C21D3E500D9C042 /* Preview Content */,
@@ -278,6 +281,7 @@
 			files = (
 				1A4428DF2C21D3E400D9C042 /* ContentView.swift in Sources */,
 				1A4428DD2C21D3E400D9C042 /* QuotesOfTheDayApp.swift in Sources */,
+				1AA3A6502C396E7500A73496 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
