@@ -16,11 +16,20 @@ struct ContentView: View {
                         .font(.title)
                         .foregroundStyle(.primary)
                     
-                    Text(viewModel.quote.owner)
-                        .font(.body)
-                        .bold()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .foregroundStyle(.secondary)
+                    HStack {
+                        Button {
+                            viewModel.copyCurrentQuote()
+                        } label: {
+                            Image(systemName: "doc.on.doc.fill")
+                        }
+                        .tint(.primary)
+                        
+                        Text(viewModel.quote.owner)
+                            .font(.body)
+                            .bold()
+                            
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
             .frame(maxHeight: .infinity, alignment: .top)
@@ -49,10 +58,10 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(viewModel: ContentViewModel(quoteGenerator: RandomQuoteGenerator()))
+    ContentView(viewModel: ContentViewModel(quoteGenerator: RandomQuoteGenerator(), pasteboard: .general))
 }
 
 #Preview {
-    ContentView(viewModel: ContentViewModel(quoteGenerator: RandomQuoteGenerator()))
+    ContentView(viewModel: ContentViewModel(quoteGenerator: RandomQuoteGenerator(), pasteboard: .general))
         .preferredColorScheme(.dark)
 }

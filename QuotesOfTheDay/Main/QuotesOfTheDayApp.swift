@@ -15,7 +15,7 @@ struct QuotesOfTheDayApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: ContentViewModel(quoteGenerator: RandomQuoteGenerator()))
+            ContentView(viewModel: ContentViewModel(quoteGenerator: RandomQuoteGenerator(), pasteboard: .general))
         }
     }
 }
