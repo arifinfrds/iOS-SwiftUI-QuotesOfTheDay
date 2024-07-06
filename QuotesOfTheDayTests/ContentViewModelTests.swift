@@ -22,4 +22,16 @@ final class ContentViewModelTests: XCTestCase {
         
         XCTAssertEqual(pasteboard.string, "\(sut.quote.message) - \(sut.quote.owner)")
     }
+    
+    func testShareCurrentQuote_whenCalled_shareQuote() {
+        let quoteGenerator = QuoteGeneratorSpy()
+        let pasteboard = UIPasteboard.general
+        let sut = ContentViewModel(quoteGenerator: quoteGenerator, pasteboard: pasteboard)
+        sut.randomizeQuote()
+        
+        sut.shareCurrentQuote()
+        
+        XCTAssertEqual(pasteboard.string, "\(sut.quote.message) - \(sut.quote.owner)")
+        XCTAssertTrue(sut.isShareSheetPresented)
+    }
 }

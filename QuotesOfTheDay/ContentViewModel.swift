@@ -5,6 +5,11 @@ import UIKit
 final class ContentViewModel: ObservableObject {
     
     @Published var quote: Quote = .default
+    @Published var isShareSheetPresented = false
+    
+    var copiedText: String {
+        pasteboard.string ?? ""
+    }
     
     private let quoteGenerator: any QuoteGenerator
     private let pasteboard: UIPasteboard
@@ -23,5 +28,10 @@ final class ContentViewModel: ObservableObject {
     
     func copyCurrentQuote() {
         pasteboard.string = "\(quote.message) - \(quote.owner)"
+    }
+    
+    func shareCurrentQuote() {
+        copyCurrentQuote()
+        isShareSheetPresented = true
     }
 }

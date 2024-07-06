@@ -5,7 +5,6 @@ struct ContentView: View {
     
     @StateObject var viewModel: ContentViewModel
     @State private var isRefreshTapped = false
-    @State private var isShareSheetPresented = false
     
     private let notificationManager: NotificationManager = LocalNotificationManager()
     
@@ -59,15 +58,14 @@ struct ContentView: View {
                     Spacer()
                     
                     Button {
-                        viewModel.copyCurrentQuote()
-                        isShareSheetPresented = true
+                        viewModel.shareCurrentQuote()
                     } label: {
                         Image(systemName: "square.and.arrow.up")
                     }
                     .tint(.brown)
-                    .sheet(isPresented: $isShareSheetPresented) {
+                    .sheet(isPresented: $viewModel.isShareSheetPresented) {
                         ActivityView(
-                            activityItems: [UIPasteboard.general.string ?? ""],
+                            activityItems: [viewModel.copiedText],
                             applicationActivities: nil
                         )
                     }
